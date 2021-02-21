@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+@font-face {
+  font-family: 'playlist';
+  src: url('./fonts/Playlist-Script.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'playlistCaps';
+  src: url('./fonts/Playlist-Caps.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+    min-height: 90vh;
+    height: fit-content;
+    width: 100vw;
+    background-color: #1b1f23;
+    color: white;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: mandatory;
+    /* scroll-snap-points-y: repeat(100vh); */
+    padding: 0;
+    margin: 0;
+}
+
+sidebar {
+    position: fixed;
+    min-width: 200px;
+    width: 20vw;
+    height: calc(100vh - 60px);
+    left: 30px;
+    top: 30px;
+    z-index: 3;
+    background-color: #171b1e;
+    border-radius: 25px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
+	-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
+    -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ;
+}
+
+.sidebar-logo {
+    position: relative;
+    width: calc(max(20vw, 200px) - 80px);
+    height: auto;
+    top: 40px;
+    left: 40px;
+    background-color: #ADCF44;
+    border-radius: 25px;
+}
+
+.sidebar-links-wrapper {
+    position: absolute;
+    display: table;
+    width: 100%;
+    top: calc(max(20vw, 200px));
+    height: fit-content;
+    max-height: 60vh;
+    background-color: #1b1f23;
+}
+
+.sidebar-info-wrapper {
+    position: absolute;
+    display: table;
+    width: 100%;
+    bottom: calc(40px + 3rem);
+    height: fit-content;
+    max-height: 60vh;
+    background-color: #1b1f23;
+}
+
+.sidebar-social-wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 40px;
+    height: fit-content;
+    max-height: 60vh;
+    background-color: #1b1f23;
+    text-align: center;
+}
+
+.sidebar-social-wrapper img {
+    display: inline-block;
+    height: 1.5rem;
+    padding: .25rem;
+}
+
+.sidebar-links-wrapper a, .sidebar-info-wrapper a {
+    display: table-row;
+    width: max(20vw, 200px);
+    height: 3rem;
+    font-family: Montserrat;
+    font-size: auto;
+    text-align: center;
+    line-height: 3rem;
+    color: white;
+    transition: color .3s;
+    text-decoration: none;
+}
+
+.sidebar-links-wrapper a:hover {
+    color: #f2bb35;
+}
+
+.sidebar-info-wrapper a {
+    font-size: 1rem;
+    line-height: 2rem;
+    height: 2rem;
+}
+
+.sidebar-info-wrapper a:hover {
+    color: #ADCF44;
+}
+
+onepage {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    height: fit-content;
+    min-height: 100vh;
+    width: 100vw;
+    background-color: tomato;
+    overflow: hidden;
+    scroll-snap-align: center;
+}
+
+onepage:nth-of-type(odd) {
+    background-color: teal;
+}
