@@ -40,9 +40,19 @@ sidebar {
     z-index: 3;
     background-color: #171b1e;
     border-radius: 25px;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
-	-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ; 
-    -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5)  ;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5); 
+	-webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5); 
+    -moz-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    animation: slide-in .5s forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 30px;
+    }
 }
 
 .sidebar-logo {
