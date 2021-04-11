@@ -29,7 +29,7 @@ body {
     color: white;
     overflow: hidden;
     overflow-y: scroll;
-    scroll-snap-type: mandatory;
+    scroll-snap-type: proximity;
     /* scroll-snap-points-y: repeat(100vh); */
     padding: 0;
     margin: 0;
@@ -83,7 +83,7 @@ sidebar {
     position: absolute;
     display: table;
     width: 100%;
-    top: calc(max(20vmin, 200px));
+    top: calc(max(20vmin, 200px) + 2vh);
     height: fit-content;
     max-height: 60vh;
     background-color: #1b1f23;
@@ -116,27 +116,45 @@ sidebar {
     margin: .35rem;
     background-color: white;
     border-radius: 6.5px;
+    transition: transform .1s ease-in-out;
+}
+
+.sidebar-social-wrapper img:hover {
+    transform: scale(1.1);
+    transform-origin: center center;
+    cursor: pointer;
 }
 
 .sidebar-links-wrapper a, .sidebar-info-wrapper a {
     display: table-row;
-    width: max(20vmin, 200px);
+    width: 100%;
     height: 3vh;
     font-family: Montserrat;
     font-size: .8rem;
     text-align: center;
     line-height: 3vh;
     color: white;
-    transition: color .3s;
     text-decoration: none;
 }
 
-.sidebar-links-wrapper a:hover {
-    color: #f2bb35;
+.link-wrapper {
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    height: fit-content;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
 }
 
-.sidebar-info-wrapper a:hover {
-    color: #ADCF44;
+.sidebar-links-wrapper .link-wrapper:hover, .sidebar-info-wrapper .link-wrapper:hover {
+    color: #1b1f23;
+}
+
+.sidebar-links-wrapper .link-wrapper:hover {
+    background-color: #f2bb35;
+}
+
+.sidebar-info-wrapper .link-wrapper:hover {
+    background-color: #ADCF44;
 }
 
 onepage {
@@ -145,18 +163,82 @@ onepage {
     position: relative;
     top: 0;
     left: 0;
-    height: 100vh;
+    height: fit-content;
     min-height: 100vh;
     width: calc(100% - 30px - max(calc(20vmin + 60px), 260px));
     padding-right: 30px;
     padding-left: max(calc(20vmin + 60px), 260px);
-    background-color: tomato;
+    padding-bottom: 5vh;
+    background-color: white;
     overflow: hidden;
     scroll-snap-align: start;
+    color: black;
+}
+
+onepage h1 {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-family: Playlist;
+    font-size: 7vmin;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+}
+
+onepage h2 {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-family: Montserrat;
+    font-size: 4vmin;
+    text-align: center;
+    color: black;
+    text-transform: lowercase;
+    text-transform: capitalize;
+}
+
+onepage h3 {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    font-family: Montserrat;
+    font-size: 2vmin;
+    text-align: center;
+    color: black;
+    text-transform: lowercase;
+    text-transform: capitalize;
+}
+
+onepage img {
+    position: relative;
+    display: inline-block;
+    width: 80%;
+    height: auto;
+    left: 10%;
+    border-radius: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+onepage imgcaption {
+    position: relative;
+    display: inline-block;
+    width: 60%;
+    height: auto;
+    left: 20%;
+    text-align: center;
+    font-size: 2vmin;
+    font-family: Playlist;
+    border-radius: 25px;
+    color: white;
+    background-color: #1b1f23;
+    margin: 0;
+    padding: 0;
 }
 
 onepage:nth-of-type(odd) {
-    background-color: teal;
+    /* background-color: teal; */
 }
 
 onepage:first-of-type {
@@ -212,16 +294,6 @@ nextbtn {
     100% {
         transform: translateY(0);
     }
-}
-
-title {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    font-family: Playlist;
-    font-size: 7vmin;
-    text-align: center;
-    color: black;
 }
 
 .background-slice-container {
