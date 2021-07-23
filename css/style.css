@@ -242,7 +242,7 @@ onepage:nth-of-type(odd) {
 }
 
 onepage:first-of-type {
-    background: url(/props/background-empty.jpg) center center;
+    background: url('../props/background-empty.jpg') center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -275,7 +275,7 @@ nextbtn {
     display: inline-block;
     width: 5vh;
     height: 5vh;
-    background-image: url(/props/Arrow-down.svg);
+    background-image: url('../props/Arrow-down.svg');
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
@@ -403,31 +403,31 @@ a:nth-of-type(5) .background-slice {
 
 a:nth-of-type(1) .background-slice .background-changer {
     background-color: grey;
-    background-image: url(/props/slices/zampa.jpg);
+    background-image: url('../props/slices/zampa.jpg');
     background-position: center center;
 }
 
 a:nth-of-type(2) .background-slice .background-changer {
     background-color: grey;
-    background-image: url(/props/slices/trecani.jpg);
+    background-image: url('../props/slices/trecani.jpg');
     background-position: 60% center;
 }
 
 a:nth-of-type(3) .background-slice .background-changer {
     background-color: grey;
-    background-image: url(/props/slices/cascata.jpeg);
+    background-image: url('../props/slices/cascata.jpeg');
     background-position: 37% center;
 }
 
 a:nth-of-type(4) .background-slice .background-changer {
     background-color: grey;
-    background-image: url(/props/slices/cerchio.jpg);
+    background-image: url('../props/slices/cerchio.jpg');
     background-position: 53% center;
 }
 
 a:nth-of-type(5) .background-slice .background-changer {
     background-color: grey;
-    background-image: url(/props/slices/chloe.jpg);
+    background-image: url('../props/slices/chloe.jpg');
     background-position: 49% center;
 }
 
