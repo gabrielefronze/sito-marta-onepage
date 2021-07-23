@@ -164,7 +164,7 @@ onepage {
     top: 0;
     left: 0;
     height: fit-content;
-    min-height: 100vh;
+    min-height: 95vh;
     width: calc(100% - 30px - max(calc(20vmin + 60px), 260px));
     padding-right: 30px;
     padding-left: max(calc(20vmin + 60px), 260px);
@@ -173,6 +173,11 @@ onepage {
     overflow: hidden;
     scroll-snap-align: start;
     color: black;
+}
+
+.pagecontent {
+    width: 60%;
+    margin: auto;
 }
 
 onepage h1 {
@@ -255,9 +260,12 @@ onepage > nextbtnwrapper {
     position: absolute;
     display: inline-block;
     bottom: 1.5vh;
-    left: max(calc(20vmin + 60px), 260px);
+    /* left: max(calc(20vmin + 60px), 260px); */
     height: 3vh;
-    width: calc(100% - 30px - max(calc(20vmin + 60px), 260px));
+    width: calc(100% - 60px - max(calc(20vmin + 60px), 260px));
+    /* padding-right: -30px; */
+    /* padding-left: max(calc(20vmin + 60px), 260px); */
+    margin: auto;
     text-align: center;
 }
 
