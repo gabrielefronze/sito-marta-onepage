@@ -173,6 +173,7 @@ onepage {
     overflow: hidden;
     scroll-snap-align: start;
     color: black;
+    white-space: pre-line;
 }
 
 .pagecontent {
@@ -465,4 +466,53 @@ a:nth-of-type(5) .background-slice .background-changer {
 .background-slice:hover p {
     opacity: 1;
     transition: opacity .5s ease-in-out;
+}
+
+.box {
+    position: relative;
+    display: inline-block;
+    border-radius: 25px;
+    padding: 25px;
+    padding-top: 50px;
+    white-space: unset !important;
+    width: calc(100% - 50px);
+    margin: auto;
+}
+
+.box::before {
+    position: absolute;
+    content: '';
+    top: 20px;
+    left: 25px;
+    font-weight: bold;
+}
+
+.punto {
+    border: #63c42b solid 2px;
+    color: #21420e;
+    background-color: #63c42b88;
+}
+
+.punto::before {
+    content: '✅ Il punto cruciale:';
+}
+
+.citazione {
+    border: #2b99c4 solid 2px;
+    color: #124153;
+    background-color: #2b99c488;
+}
+
+.citazione::before {
+    content: '💬 La citazione:';
+}
+
+.warning {
+    border: #f2bb35 solid 2px;
+    color: #524012;
+    background-color: #f2bb3588;
+}
+
+.warning::before {
+    content: '⚠️ Attenzione:';
 }
