@@ -479,12 +479,17 @@ a:nth-of-type(5) .background-slice .background-changer {
     margin: auto;
 }
 
+.box img {
+    display: none;
+}
+
 .box::before {
     position: absolute;
     content: '';
     top: 20px;
     left: 25px;
     font-weight: bold;
+    text-shadow: 0px 0px 4px #00000044;
 }
 
 .punto {
@@ -505,6 +510,16 @@ a:nth-of-type(5) .background-slice .background-changer {
 
 .citazione::before {
     content: '💬 La citazione:';
+}
+
+.estratto {
+    border: #4b4b4b solid 2px;
+    color: #4b4b4b;
+    background-color: #4b4b4b22;
+}
+
+.estratto::before {
+    content: '📄 Il documento ufficiale:';
 }
 
 .warning {
